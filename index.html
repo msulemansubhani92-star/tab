@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>TAB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tab.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #aeb7e1, #050208); padding: 40px; } /* Hide
+radio buttons */ input[type="radio"] { display: none; } .tabs { width: 700px; margin: auto; } /* Tab Labels Container */
+.tab-labels { display: flex; gap: 10px; } /* 3D Button Style */ .tab-labels label { flex: 1; padding: 15px; text-align:
+center; cursor: pointer; font-weight: bold; color: white; border-radius: 10px 10px 0 0; background:
+linear-gradient(145deg, #ff6a00, #ee2d8b); box-shadow: 0 6px #c2185b; transition: 0.2s; } /* Press Effect */ .tab-labels
+label:active { box-shadow: 0 2px #c2185b; transform: translateY(4px); } /* Different colors per tab */ label[for="tab2"]
+{ background: linear-gradient(145deg, #36d1dc, #5b86e5); box-shadow: 0 6px #2c3e99; } label[for="tab3"] { background:
+linear-gradient(145deg, #11998e, #38ef7d); box-shadow: 0 6px #1b8f4d; } label[for="tab4"] { background:
+linear-gradient(145deg, #f7971e, #ffd200); box-shadow: 0 6px #c79100; } label[for="tab5"] { background:
+linear-gradient(145deg, #fc4a1a, #f7b733); box-shadow: 0 6px #c0392b; } /* Active tab effect */ input#tab1:checked ~
+.tab-labels label[for="tab1"], input#tab2:checked ~ .tab-labels label[for="tab2"], input#tab3:checked ~ .tab-labels
+label[for="tab3"], input#tab4:checked ~ .tab-labels label[for="tab4"], input#tab5:checked ~ .tab-labels
+label[for="tab5"] { transform: translateY(4px); box-shadow: 0 2px rgba(0,0,0,0.4); opacity: 0.9; } /* Tab Content Box */
+.tab-content { padding: 30px; border-radius: 0 10px 10px 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); margin-top:
+-5px; background:linear-gradient(145deg, #eae4e4, #ae4d4d); } /* Hide content */ .content { display: none; animation:
+fadeIn 0.4s ease-in-out; } /* Show selected content */ input#tab1:checked ~ .tab-content #content1, input#tab2:checked ~
+.tab-content #content2, input#tab3:checked ~ .tab-content #content3, input#tab4:checked ~ .tab-content #content4,
+input#tab5:checked ~ .tab-content #content5 { display: block; } p{ font-family:"Lobster Two"; color:#141313; } /* Fade
+animation */ @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform:
+translateY(0); } }
+
+    </style>
+</head>
+<body class="animate__animated animate__zoomInDown">
+
+<div class="tabs">
+
+  <!-- Radio Buttons -->
+  <input type="radio" id="tab1" name="tabs" checked>
+  <input type="radio" id="tab2" name="tabs">
+  <input type="radio" id="tab3" name="tabs">
+  <input type="radio" id="tab4" name="tabs">
+  <input type="radio" id="tab5" name="tabs">
+
+  <!-- Tab Buttons -->
+  <div class="tab-labels">
+    <label for="tab1">Home</label>
+    <label for="tab2">About</label>
+    <label for="tab3">Services</label>
+    <label for="tab4">BLOG</label>
+    <label for="tab5">Contact</label>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+    <div class="content" id="content1">
+      <h2>Home</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam tempore vel, officia praesentium recusandae. Obcaecati eligendi impedit sapiente incidunt, reiciendis adipisci architecto! Culpa excepturi quo neque quia dolor. Enim.
+      Vero voluptate minima voluptas ipsa qui perspiciatis dicta pariatur sit incidunt ipsum mollitia, deleniti, magnam culpa id sunt provident numquam! Illo maxime officia eos quae hic laborum iusto facere unde.
+      Impedit explicabo minus alias iure. Vitae fugiat molestias officiis veritatis. Ducimus vel deserunt, beatae expedita dolores cum quibusdam ab earum dolor magni libero doloribus amet aliquid voluptas asperiores. Quasi, quod.
+      Recusandae rem magni dolores voluptates incidunt iure minima quibusdam ea cupiditate ab velit esse corporis sequi corrupti, labore a ipsum, provident iusto ullam rerum. Maxime alias sint tempore eveniet id!
+      Soluta molestias quos, pariatur ipsam quidem omnis. Veritatis officiis corporis, tempore animi amet voluptatibus est labore nesciunt dolore molestiae voluptas impedit sequi molestias rerum facilis consequuntur asperiores aliquam perspiciatis tenetur? <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum aliquam autem non rerum eius quos inventore sint facilis veniam dolorum suscipit error, aliquid necessitatibus dolorem, praesentium laborum accusamus reiciendis.
+      Aliquid omnis aliquam, voluptas dolores possimus porro eum ad aspernatur, delectus dignissimos debitis illum quis architecto iure a nam. Temporibus dicta, sit atque ipsa hic debitis in rem cumque quo?
+      Minus dolores dignissimos optio, laboriosam voluptates beatae ex, iure qui placeat perspiciatis accusamus explicabo non repellendus molestiae magni eaque dolor iusto fuga inventore minima harum? Amet esse neque sed mollitia.</p>
+    </div>
+    <div class="content" id="content2">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam tempore vel, officia praesentium recusandae. Obcaecati eligendi impedit sapiente incidunt, reiciendis adipisci architecto! Culpa excepturi quo neque quia dolor. Enim.
+      Vero voluptate minima voluptas ipsa qui perspiciatis dicta pariatur sit incidunt ipsum mollitia, deleniti, magnam culpa id sunt provident numquam! Illo maxime officia eos quae hic laborum iusto facere unde.
+      Impedit explicabo minus alias iure. Vitae fugiat molestias officiis veritatis. Ducimus vel deserunt, beatae expedita dolores cum quibusdam ab earum dolor magni libero doloribus amet aliquid voluptas asperiores. Quasi, quod.
+      Recusandae rem magni dolores voluptates incidunt iure minima quibusdam ea cupiditate ab velit esse corporis sequi corrupti, labore a ipsum, provident iusto ullam rerum. Maxime alias sint tempore eveniet id!
+      Soluta molestias quos, pariatur ipsam quidem omnis. Veritatis officiis corporis, tempore animi amet voluptatibus est labore nesciunt dolore molestiae voluptas impedit sequi molestias rerum facilis consequuntur asperiores aliquam perspiciatis tenetur? <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum aliquam autem non rerum eius quos inventore sint facilis veniam dolorum suscipit error, aliquid necessitatibus dolorem, praesentium laborum accusamus reiciendis.
+      Aliquid omnis aliquam, voluptas dolores possimus porro eum ad aspernatur, delectus dignissimos debitis illum quis architecto iure a nam. Temporibus dicta, sit atque ipsa hic debitis in rem cumque quo?
+      Minus dolores dignissimos optio, laboriosam voluptates beatae ex, iure qui placeat perspiciatis accusamus explicabo non repellendus molestiae magni eaque dolor iusto fuga inventore minima harum? Amet esse neque sed mollitia..</p>
+    </div>
+    <div class="content" id="content3">
+      <h2>Services</h2>
+      <p>We provide web design, UI development, and more. <br><br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam tempore vel, officia praesentium recusandae. Obcaecati eligendi impedit sapiente incidunt, reiciendis adipisci architecto! Culpa excepturi quo neque quia dolor. Enim.
+      Vero voluptate minima voluptas ipsa qui perspiciatis dicta pariatur sit incidunt ipsum mollitia, deleniti, magnam culpa id sunt provident numquam! Illo maxime officia eos quae hic laborum iusto facere unde.
+      Impedit explicabo minus alias iure. Vitae fugiat molestias officiis veritatis. Ducimus vel deserunt, beatae expedita dolores cum quibusdam ab earum dolor magni libero doloribus amet aliquid voluptas asperiores. Quasi, quod.
+      Recusandae rem magni dolores voluptates incidunt iure minima quibusdam ea cupiditate ab velit esse corporis sequi corrupti, labore a ipsum, provident iusto ullam rerum. Maxime alias sint tempore eveniet id!
+      Soluta molestias quos, pariatur ipsam quidem omnis. Veritatis officiis corporis, tempore animi amet voluptatibus est labore nesciunt dolore molestiae voluptas impedit sequi molestias rerum facilis consequuntur asperiores aliquam perspiciatis tenetur? <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum aliquam autem non rerum eius quos inventore sint facilis veniam dolorum suscipit error, aliquid necessitatibus dolorem, praesentium laborum accusamus reiciendis.
+      Aliquid omnis aliquam, voluptas dolores possimus porro eum ad aspernatur, delectus dignissimos debitis illum quis architecto iure a nam. Temporibus dicta, sit atque ipsa hic debitis in rem cumque quo?
+      Minus dolores dignissimos optio, laboriosam voluptates beatae ex, iure qui placeat perspiciatis accusamus explicabo non repellendus molestiae magni eaque dolor iusto fuga inventore minima harum? Amet esse neque sed mollitia.</p>
+    </div>
+    <div class="content" id="content4">
+      <h2>BLOG</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam tempore vel, officia praesentium recusandae. Obcaecati eligendi impedit sapiente incidunt, reiciendis adipisci architecto! Culpa excepturi quo neque quia dolor. Enim.
+      Vero voluptate minima voluptas ipsa qui perspiciatis dicta pariatur sit incidunt ipsum mollitia, deleniti, magnam culpa id sunt provident numquam! Illo maxime officia eos quae hic laborum iusto facere unde.
+      Impedit explicabo minus alias iure. Vitae fugiat molestias officiis veritatis. Ducimus vel deserunt, beatae expedita dolores cum quibusdam ab earum dolor magni libero doloribus amet aliquid voluptas asperiores. Quasi, quod.
+      Recusandae rem magni dolores voluptates incidunt iure minima quibusdam ea cupiditate ab velit esse corporis sequi corrupti, labore a ipsum, provident iusto ullam rerum. Maxime alias sint tempore eveniet id!
+      Soluta molestias quos, pariatur ipsam quidem omnis. Veritatis officiis corporis, tempore animi amet voluptatibus est labore nesciunt dolore molestiae voluptas impedit sequi molestias rerum facilis consequuntur asperiores aliquam perspiciatis tenetur? <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum aliquam autem non rerum eius quos inventore sint facilis veniam dolorum suscipit error, aliquid necessitatibus dolorem, praesentium laborum accusamus reiciendis.
+      Aliquid omnis aliquam, voluptas dolores possimus porro eum ad aspernatur, delectus dignissimos debitis illum quis architecto iure a nam. Temporibus dicta, sit atque ipsa hic debitis in rem cumque quo?
+      Minus dolores dignissimos optio, laboriosam voluptates beatae ex, iure qui placeat perspiciatis accusamus explicabo non repellendus molestiae magni eaque dolor iusto fuga inventore minima harum? Amet esse neque sed mollitia..</p>
+    </div>
+    <div class="content" id="content5">
+      <h2>Contact</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam tempore vel, officia praesentium recusandae. Obcaecati eligendi impedit sapiente incidunt, reiciendis adipisci architecto! Culpa excepturi quo neque quia dolor. Enim.
+      Vero voluptate minima voluptas ipsa qui perspiciatis dicta pariatur sit incidunt ipsum mollitia, deleniti, magnam culpa id sunt provident numquam! Illo maxime officia eos quae hic laborum iusto facere unde.
+      Impedit explicabo minus alias iure. Vitae fugiat molestias officiis veritatis. Ducimus vel deserunt, beatae expedita dolores cum quibusdam ab earum dolor magni libero doloribus amet aliquid voluptas asperiores. Quasi, quod.
+      Recusandae rem magni dolores voluptates incidunt iure minima quibusdam ea cupiditate ab velit esse corporis sequi corrupti, labore a ipsum, provident iusto ullam rerum. Maxime alias sint tempore eveniet id!
+      Soluta molestias quos, pariatur ipsam quidem omnis. Veritatis officiis corporis, tempore animi amet voluptatibus est labore nesciunt dolore molestiae voluptas impedit sequi molestias rerum facilis consequuntur asperiores aliquam perspiciatis tenetur? <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum aliquam autem non rerum eius quos inventore sint facilis veniam dolorum suscipit error, aliquid necessitatibus dolorem, praesentium laborum accusamus reiciendis.
+      Aliquid omnis aliquam, voluptas dolores possimus porro eum ad aspernatur, delectus dignissimos debitis illum quis architecto iure a nam. Temporibus dicta, sit atque ipsa hic debitis in rem cumque quo?
+      Minus dolores dignissimos optio, laboriosam voluptates beatae ex, iure qui placeat perspiciatis accusamus explicabo non repellendus molestiae magni eaque dolor iusto fuga inventore minima harum? Amet esse neque sed mollitia..</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
